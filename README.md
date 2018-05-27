@@ -2,7 +2,7 @@
 
 A Python implementation of the models in the Battlesnake webhook API.
 
-# Example Usage (with Bottle web server)
+## Example Usage (with Bottle web server)
 
 ```python
 import bottle
