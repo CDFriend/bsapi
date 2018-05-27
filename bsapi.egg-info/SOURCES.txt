@@ -1,6 +1,0 @@
-bsapi/__init__.py
-bsapi/models.py
-bsapi.egg-info/PKG-INFO
-bsapi.egg-info/SOURCES.txt
-bsapi.egg-info/dependency_links.txt
-bsapi.egg-info/top_level.txt

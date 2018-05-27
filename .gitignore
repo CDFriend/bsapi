@@ -1,4 +1,5 @@
 # Python/Pipenv files
+bsapi.egg-info
 Pipfile.lock
 *.pyc
 
