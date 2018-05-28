@@ -1,6 +1,7 @@
 # bsapi
 
-~[Build Status](https://travis-ci.org/CDFriend/bsapi.svg?branch=master)
+[![Build Status](https://travis-ci.org/CDFriend/bsapi.svg?branch=master)](https://travis-ci.org/CDFriend/bsapi)
+
 
 A Python implementation of the models in the Battlesnake webhook API.
 
