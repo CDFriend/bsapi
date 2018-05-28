@@ -3,6 +3,47 @@ import random
 from bsapi.models import *
 
 
+def test_game():
+    """Game should have an id string."""
+    data = {"id": "game-id-string"}
+    game = Game(data)
+
+    assert game.id == "game-id-string"
+
+
+def test_board():
+    """Board fields should be set correctly."""
+    data = {
+        "height": 13,
+        "width": 17,
+        "food": [
+            {
+                "x": 1,
+                "y": 3
+            }
+        ],
+        "snakes": [
+            {
+                "id": "snake-id-string",
+                "name": "Sneky Snek",
+                "health": 90,
+                "body": [
+                    {
+                        "x": 1,
+                        "y": 3
+                    }
+                ]
+            }
+        ]
+    }
+
+    board = Board(data)
+
+    assert type(board.food) is list
+    assert type(board.snakes) is list
+    assert board.height == 13 and board.width == 17
+
+
 def test_coords():
     """Coords should set an x and y parameter."""
     x = random.randint(1, 100)
