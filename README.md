@@ -26,7 +26,7 @@ from bsapi.models import *
 
 app = Flask(__name__)
 
-@app.route('/move'):
+@app.route('/move')
 def move():
     return MoveResponse('left')
 ```
