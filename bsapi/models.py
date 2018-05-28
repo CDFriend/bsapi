@@ -68,7 +68,7 @@ class SnakeRequest:
 
 class MoveResponse(dict):
     def __init__(self, move):
-        super().__init__()
+        super(MoveResponse, self).__init__()
 
         assert move in ['up', 'down', 'left', 'right'], \
             "Move must be one of [up, down, left, right]"
@@ -77,7 +77,7 @@ class MoveResponse(dict):
 
 class StartResponse(dict):
     def __init__(self, color):
-        super().__init__()
+        super(StartResponse, self).__init__()
 
         assert type(color) is str, "Color value must be string"
         self["color"] = color
