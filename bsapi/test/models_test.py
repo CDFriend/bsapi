@@ -1,5 +1,37 @@
 import pytest
+import random
 from bsapi.models import *
+
+
+def test_coords():
+    """Coords should set an x and y parameter."""
+    x = random.randint(1, 100)
+    y = random.randint(1, 100)
+    data = {"x": x, "y": y}
+
+    coords = Coords(data)
+
+    assert coords.x == x
+    assert coords.y == y
+
+
+def test_snake():
+    data = {
+        "id": "snake-id-string",
+        "name": "Sneky Snek",
+        "health": 90,
+        "body": [
+          { "x": 1, "y": 3 },
+          { "x": 2, "y": 4 },
+        ]
+    }
+
+    snake = Snake(data)
+
+    assert snake.id == "snake-id-string"
+    assert snake.name == "Sneky Snek"
+    assert snake.health == 90
+    assert snake.head().x == 1 and snake.head().y == 3
 
 
 def test_startresponse():
