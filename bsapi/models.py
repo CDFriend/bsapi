@@ -1,3 +1,20 @@
+"""
+Battlesnake Webhook API Implementation
+---------------------------------------
+
+An implementation of all models in the 'Snake' webhook API. Response objects
+are implemented as superclasses of dict for easy conversion to JSON.
+
+Example usage:
+> def move(request_json):
+>     req = SnakeRequest(request_json)
+>
+>     # Do some stuff with your request object...
+>
+>     return MoveResponse("left")
+"""
+
+
 class Coords:
     def __init__(self, json):
         self.x = json.get('x')
