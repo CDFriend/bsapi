@@ -20,6 +20,9 @@ class Coords:
         self.x = json.get('x')
         self.y = json.get('y')
 
+    def __getitem__(self, i):
+        return [self.x, self.y][i]
+
 
 class Snake:
     def __init__(self, json):

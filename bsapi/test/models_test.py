@@ -56,6 +56,17 @@ def test_coords():
     assert coords.y == y
 
 
+def test_coords_unpack():
+    """Should be able to unpack coords objects."""
+    x = random.randint(1, 100)
+    y = random.randint(1, 100)
+    data = {"x": x, "y": y}
+
+    cx, cy = Coords(data)
+
+    assert cx == x and cy == y
+
+
 def test_snake():
     data = {
         "id": "snake-id-string",
